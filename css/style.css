@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.container form input {
+  background-color: #111;
+  color: white;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+.container form > input {
+  width: 100%;
+}
+
+.total {
+  font-size: 12px;
+}
+.container form input:focus {
+  transform: scale(1.05);
+  background-color: #000;
+}
+.container form .price-sec .total {
+  height: 30px;
+}
+.container form .price-sec .total::before {
+  content: "Total: ";
+}
+button {
+  background-color: #084328;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #0843289c;
+  letter-spacing: 2px;
+}
+.container .search-btn button {
+  width: 45%;
+}
+table thead tr td {
+  padding: 5px;
+}
+@media (max-width: 576px) {
+  .search-btn button {
+    flex-basis: 100%;
+  }
+  table thead tr td {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #084328;
+}
+
+/* To Top Button */
+.to-top {
+  bottom: 20px;
+  right: -40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.to-top:hover {
+  background-color: #084328;
+  box-shadow: 0 0 0px 2px #0843289c;
+  transform: scale(1.2);
+}

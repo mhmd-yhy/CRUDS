@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cruds</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+
+  <body class="bg-success text-white position-relative">
+    <div class="container m-auto p-5">
+      <header class="text-center text-uppercase mb-3">
+        <h2>Cruds</h2>
+        <p>product management system</p>
+      </header>
+      <form action="" class="row">
+        <input type="text" placeholder="title" class="title" />
+        <div class="price-sec d-flex flex-wrap row justify-content-between justify-content-sm-start">
+          <input onkeyup="getTotal()" type="number" placeholder="price" class="price me-sm-2 me-0 col-5 col-sm-3" />
+          <input onkeyup="getTotal()" type="number" placeholder="taxes" class="taxes me-sm-2 me-0 col-5 col-sm-3" />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="discount"
+            class="discount me-sm-2 me-0 col-5 col-sm-3"
+          />
+          <div class="col-5 col-sm-2 p-0 pt-1"><span class="total bg-danger text-white rounded p-1"></span></div>
+        </div>
+        <input type="number" placeholder="count" class="count" />
+        <input type="text" placeholder="category" class="category" />
+        <button class="text-light w-100 text-capitalize border-0 p-1 create mb-2 rounded">create</button>
+        <div class="search-sec p-0">
+          <input
+            onkeyup="getResultSearch(this.value.toLowerCase())"
+            type="search"
+            placeholder="search"
+            class="search w-100 mb-2"
+          />
+          <div class="search-btn d-flex justify-content-between flex-wrap">
+            <button
+              class="text-light w-100 text-capitalize border-0 p-1 search-by-title rounded mb-2"
+              onclick="getSearchMood('search by title')"
+            >
+              search by title
+            </button>
+            <button
+              class="text-light w-100 text-capitalize border-0 p-1 search-by-category rounded mb-2"
+              onclick="getSearchMood('search by category')"
+            >
+              search by category
+            </button>
+          </div>
+        </div>
+        <button class="text-light w-100 text-capitalize border-0 p-1 delete-all d-none rounded">Delete All</button>
+      </form>
+      <div class="responsive-table overflow-x-auto">
+        <table class="w-100">
+          <thead>
+            <tr>
+              <td class="text-uppercase text-center fs-6 fw-bold">id</td>
+              <td class="text-uppercase text-center fs-6 fw-bold">title</td>
+              <td class="text-uppercase text-center fs-6 fw-bold">price</td>
+              <td class="text-uppercase text-center fs-6 fw-bold">taxes</td>
+              <td class="text-uppercase text-center fs-6 fw-bold">discount</td>
+              <td class="text-uppercase text-center fs-6 fw-bold">total</td>
+              <td class="text-uppercase text-center fs-6 fw-bold">category</td>
+              <td class="text-uppercase text-center fs-6 fw-bold">update</td>
+              <td class="text-uppercase text-center fs-6 fw-bold">delete</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="to-top position-fixed text-uppercase bg-primary p-2 rounded">up</div>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
